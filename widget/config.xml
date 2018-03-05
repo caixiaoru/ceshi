@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget id="A6075527744015"  version="0.0.1">
-    <name>ceshi</name>
+    <name>测试</name>
     <description>
-        ceshi
+        Example For APICloud.
     </description>
     <author email="1441780228@qq.com" href="http://www.apicloud.com">
         Developer
@@ -20,7 +20,7 @@
 	<preference name="autoUpdate" value="true" />
 	<preference name="smartUpdate" value="false" />
 	<preference name="debug" value="true"/>
-	<preference name="statusBarAppearance" value="false"/>
+	<preference name="statusBarAppearance" value="true"/>
 	<permission name="readPhoneState" />
 	<permission name="camera" />
 	<permission name="record" />
