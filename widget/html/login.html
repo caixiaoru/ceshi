@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1">
+    <!-- <meta name="format-detection" content="telephone=no,email=no,date=no,address=no"> -->
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/background.css">
+    <link rel="stylesheet" href="../css/api.css">
+
+	<style>
+		.err_mess{color:red}
+	</style>
+</head>
+<body>
+   <div class="container-fluid">
+	<div class="row clearfix">
+		<div class="col-md-12 column bg_login">
+           <p>我们用心选，请您放心选</p>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="bg_all">
+				<p class="bg_login_title">报价系统</p>
+				<div class="bg_login_content">
+					<form class="">
+						<div>
+							<span class="fa fa-user"></span>
+							<input type="text" placeholder="请输入您的用户名" id="username">
+
+						</div>
+						<div>
+							<span class="fa fa-lock"></span> 
+							<input type="password" placeholder="请输入您的密码" id="password">
+							
+						</div>
+					</form>
+				</div>
+				<div class="bg_login_btn">
+					<div tapmode onclick="fnRegister();">确认</div>
+					<div>重置</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="../script/jquery-3.1.1.min.js"></script>
+<script src="../script/bootstrap.min.js"></script>
+<script src="../script/commen.js"></script>
+<script src="../script/api.js"></script>
+
+<script src="../script/sha1.js"></script>
+<script>
+	apiready = function() {
+    
+};
+
+//注册
+// 注册
+// function fnRegister() {
+//     var usernameValue=$api.byId("username").value;
+//     var passwordValue=$api.byId("password").value;
+//     var now = Date.now(); 
+//     var appKey = SHA1("A6075527744015"+"UZ"+ "89BAEF2B-99AE-1AA6-31DD-601F72673D41"+"UZ"+now)+"."+now;    
+//     api.ajax({
+//         url: 'https://d.apicloud.com/mcm/api/user',
+//         method: 'post',
+//         headers: {
+//             "X-APICloud-AppId": "A6075527744015",
+//             "X-APICloud-AppKey": appKey
+//         },
+//         data: {
+//             values: {
+//                 "username": usernameValue,
+//                 "password": passwordValue
+//             }
+//         }
+//     }, function(ret, err) {   
+//        alert(ret);
+//         if (ret && ret.id) {
+//             api.alert({
+//                 title: '提示',
+//                 msg: '注册成功',
+//             }, function(ret, err) {
+//                 if (ret) {
+//                     // 跨窗口执行Script, 将用户名传给登录页面
+//                     api.execScript({
+//                         name: 'login',
+//                         frameName: 'login',
+//                         script: 'fnSetUsername(\"' + usernameValue + '\");'
+//                     });
+//                     api.closeWin();
+//                 }
+//             });
+//         } else {
+           
+//             api.toast({
+//                 msg: '注册失败',
+//                 duration: 2000,
+//                 location: 'middle'
+//             });
+//         }
+//     });
+
+
+// 登录
+
+ function fnRegister() {
+    var userinfo;
+    var usernameValue=$api.byId("username").value;
+    var passwordValue=$api.byId("password").value;
+    var now = Date.now(); 
+      var appKey = SHA1("A6075527744015"+"UZ"+ "89BAEF2B-99AE-1AA6-31DD-601F72673D41"+"UZ"+now)+"."+now;    
+    api.ajax({
+        url: 'https://d.apicloud.com/mcm/api/user/login',
+        method: 'post',
+        headers: {
+            "X-APICloud-AppId": "A6075527744015",
+            "X-APICloud-AppKey": appKey
+        },
+        data: {
+            values: {
+                "username": usernameValue,
+                "password": passwordValue
+            }
+        }
+        // success: function(msg) {
+        //                 alert(msg);
+        //             },
+        //             error:function(){
+
+        //             }
+        
+    }, function(ret, err) {  
+          
+        if (ret && ret.id) {          
+           
+            
+            // 保存用户信息
+            // alert(JSON.stringify(ret));
+             $api.setStorage('userId', ret.userId);  
+             $api.setStorage('uId',ret.id);           
+             // var userId=$api.getStorage('uId');
+             //  alert(userId);
+
+             
+            
+            api.alert({
+                title: '提示',
+                msg: '登录成功',
+            }, function(ret, err) {
+                if (ret) {
+                   
+            $(window).attr("location","one.html");
+           // var username = $api.getStorage('userInfo');
+           // alert(username.username);
+                }
+            });
+        } else {
+           var err_msg = '错误码：' + err.code + '；错误信息：' + err.msg + '网络状态码：' + err.statusCode;
+            api.toast({
+                msg:  err_msg,
+                duration: 2000,
+                location: 'middle'
+            });
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ }
+
+// var key = 'user';
+// var user = {};
+// user.name = 'kenny';
+// user.email = 'kenny@163.com';
+// $api.setStorage(key, user);
+// user = $api.getStorage(key);
+// alert(user);
+// alert(user.name);
+</script>
+</body>
+</html>
+

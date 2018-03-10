@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1">
+    <title>添加报价</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/background.css">
+    <style>
+        @media screen and (orientation: portrait) {
+            html{
+                width : 100% ;
+                height : 100% ;
+            }
+            body{
+                width : 100% ;
+                height : 100% ;
+
+
+                margin:0!important;
+            }
+            #body{
+                position : absolute ;
+
+            }
+        }
+        @media screen and (orientation: landscape) {
+            html{
+                width : 100% ;
+                height : 100% ;
+
+            }
+            body{
+                width : 100% ;
+                height : 100% ;
+
+                margin:0!important;
+            }
+            #body{
+                position : absolute ;
+                top : 0 ;
+                left : 0 ;
+                width : 100% ;
+                height : 100% ;
+
+            }
+        }
+        /*#print p{*/
+        /*margin: auto ;*/
+        /*margin-top : 20px ;*/
+        /*text-align: center;*/
+        /*}*/
+
+
+
+
+
+    </style>
+</head>
+<body id="body">
+<div class="container-fluid">
+    <!--header-->
+    <div class="row clearfix">
+        <div class="col-md-12 column bg_login">
+            <p>我们用心选，请您放心选</p>
+        </div>
+    </div>
+    <!--logo-->
+    <div class="row clearfix bg_list_logo">
+        <div class="col-md-2 col-sm-1 col-xs-12 column "></div>
+        <div class="col-md-5 col-sm-6 col-xs-6 column bg_list_logo_img">
+            <img src="../../img/logo.png">&nbsp;——&nbsp;非洲最具影响力平台
+        </div>
+
+        <div class="col-md-3 col-sm-4 col-xs-6 column bg_list_logo_content">
+            <form>
+                <input type="text">
+                <span>查询报单价</span>
+            </form>
+        </div>
+        <div class="col-md-2 col-sm-1 col-xs-12 column "></div>
+    </div>
+    <!--导航栏-->
+    <div class="row clearfix bg_list_nav">
+
+
+        <nav class="navbar navbar-default "  role="navigation">
+            <div class="col-md-2 col-sm-2 col-xs-2 column "></div>
+            <div class="container-fluid  col-md-8 col-sm-8 col-xs-8 column">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="list.html">报价列表</a></li>
+                        <li class="active_nav"><a href="add.html">添加报价</a></li>
+                        <li><a href="video.html">频道报价</a></li>
+                        <li><a href="recommended.html">报价推荐</a></li>
+                        <li><a href="login.html">退出系统</a></li>
+                        <li><a href="../one.html">返回前台</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2 column "></div>
+        </nav>
+
+
+
+    </div>
+
+    <!--报价列表-->
+    <div class="row ">
+        <div class="col-md-2 col-sm-2 col-xs-2 column "></div>
+        <div class="col-md-8 column bg_add ">
+            <form>
+                <table >
+                    <tr>
+                        <td>选择频道:</td>
+                        <td>
+                            <label for="add_video"></label>
+                            <select id="add_video">
+                                <option>媒体</option>
+                                <option>教育</option>
+                            </select>
+                        </td>
+                        <td class="bg_add_video"><p><a href="addvideo.html">添加频道</a></p></td>
+                        <td class="bg_add_comp"><p><a href="addcomp.html">添加单位</a></p></td>
+                    </tr>
+                    <tr>
+                        <td>名称:</td>
+                        <td colspan="3">
+                            <label for="add_name"></label>
+                            <input type="text" id="add_name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>卖点:</td>
+                        <td colspan="3">
+                            <label for="add_sale"></label>
+                            <textarea id="add_sale" rows="3"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>服务权益:</td>
+                        <td colspan="3">
+                            <label for="add_service"></label>
+                            <textarea id="add_service" rows="3"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>价格:</td>
+                        <td colspan="3">
+                            <div contenteditable="true" class="add_price">
+                                <label for="add_price"></label>
+                                <select id="add_price">
+                                    <option>元/月</option>
+                                    <option>元/年</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+            <div class="bg_add_btn">
+                <div class="bg_add_btn_ok"><a href="list.html">确定</a></div>
+                <div class="bg_add_btn_replay">重置</div>
+            </div>
+
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2 column "></div>
+    </div>
+
+
+</div>
+
+
+<script src="../../js/jquery-3.1.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/commen.js"></script>
+<script>
+    //  横屏
+    var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+    window.addEventListener(evt, function() {
+
+        var width = document.documentElement.clientWidth;
+        var height =  document.documentElement.clientHeight;
+        var height2=$('#body').prop('scrollHeight');
+        console.log(height2);
+        $print =  $('#body');
+        if( width > height ){
+
+            $print.width(width);
+            $print.height(height);
+            $print.css('top',  0 );
+            $print.css('left',  0 );
+            $print.css('transform' , 'none');
+            $print.css('transform-origin' , '50% 50%');
+            console.log(1);
+        }
+        else{
+            $print.width(height);
+            $print.height(height2);
+            $print.css('top',  (height-height2)/2 );
+            $print.css('left',  0-(height-height2)/2 );
+            $print.css('transform' , 'rotate(270deg)');
+            $print.css('transform-origin' , '50% 50%');
+            console.log(2);
+        }
+
+    }, false);
+</script>
+</body>
+</html>

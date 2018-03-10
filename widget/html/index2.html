@@ -1,0 +1,167 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>组合报价</title>
+<script language="javascript" src="../script/jquery-3.1.1.min.js"></script>
+<!-- 
+如果您使用的是高版本jQuery调用下面jQuery迁移辅助插件即可
+<script src="http://www.jq22.com/jquery/jquery-migrate-1.2.1.min.js"></script>
+-->
+<!-- <script language="javascript" src="../script/jquery.jqprint-0.3.js"></script> -->
+<style>
+  *{
+    background-color: white!important;
+    color:black;
+  }
+</style>
+<script src="../script/html2canvas.min.js"></script>
+<script language="javascript">
+function aa(){
+   var system = {
+                 win: false,
+                 mac: false,
+                 xll: false,
+                 ipad:false
+                };
+
+            //检测平台
+    var p = navigator.platform;
+
+    system.win = p.indexOf("Win") == 0;
+    system.mac = p.indexOf("Mac") == 0;
+    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+    system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
+
+    if (system.win || system.mac || system.xll ) {
+      
+// $('#mycanvas').remove();
+                var _height=$('.ddd').height();
+                    setTimeout(function(){
+                        var canvas = document.createElement("canvas"),
+                            w=$('#ddd').width(),
+                            h=$('#ddd').height();
+                        canvas.width = w * 2;
+                        canvas.height = h * 2;
+                        canvas.style.width = w + "px";
+                        canvas.style.height = h + "px";
+                        var context = canvas.getContext("2d");
+//然后将画布缩放，将图像放大两倍画到画布上
+                        context.scale(2,2);
+                        html2canvas(document.getElementById('ddd'), {
+                            allowTaint: false,
+                            taintTest: true,
+                            canvas: canvas,
+                            onrendered: function(canvas) {
+                                canvas.id = "mycanvas";
+                                 // canvas.style.display = 'none';
+                                $("#ddd").replaceWith(canvas); 
+                                //生成base64图片数据
+
+                                imgData = canvas.toDataURL("image/png",1);
+                             document.write(imgData);
+                                
+                            },
+                            width:1512,
+                            height:15000
+                        })
+                    },2500)
+                
+
+      
+    } else {
+      alert("移动设备");
+
+//       // $('#mycanvas').remove();
+//                 var _height=$('.ddd').height();
+//                     setTimeout(function(){
+//                         var canvas = document.createElement("canvas"),
+//                             w=$('#ddd').width(),
+//                             h=$('#ddd').height();
+//                         canvas.width = w * 2;
+//                         canvas.height = h * 2;
+//                         canvas.style.width = w + "px";
+//                         canvas.style.height = h + "px";
+//                         var context = canvas.getContext("2d");
+// //然后将画布缩放，将图像放大两倍画到画布上
+//                         context.scale(2,2);
+//                         html2canvas(document.getElementById('ddd'), {
+//                             allowTaint: false,
+//                             taintTest: true,
+//                             canvas: canvas,
+//                             onrendered: function(canvas) {
+//                                 canvas.id = "mycanvas";
+//                                  // canvas.style.display = 'none';
+//                                 $("#ddd").replaceWith(canvas); 
+//                                 //生成base64图片数据
+
+//                                 imgData = canvas.toDataURL("image/png",1);
+//                              document.write(imgData);
+//                                 *
+//                                  * 在本地进行文件保存
+//                                  * @param  {String} data     要保存到本地的图片数据
+//                                  * @param  {String} filename 文件名
+                                 
+//                                 // var saveFile = function(data, filename){
+//                                 //     var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+//                                 //     save_link.href = data;
+//                                 //     save_link.download = filename;
+
+//                                 //     var event = document.createEvent('MouseEvents');
+//                                 //     event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+//                                 //     save_link.dispatchEvent(event);
+//                                 // };
+
+//                                 // // 下载后sss的问题名var name="a.png"
+//                                 // var filename ='报价套餐.png';
+//                                 // // download
+//                                 // saveFile(imgData,filename);
+
+
+//                    // var a_href2=document.getElementById("a_href");
+//                    // a_href2.setAttribute("href",_imgSrc);
+//                    // a_href2.setAttribute('download',"wenjian");
+//                             },
+//                             width:1512,
+//                             height:15000
+//                         })
+//                     },2500)
+                
+
+    } 	
+}
+</script>
+</head>
+<body>
+  <div id="aaa">wooooooooooooooooooooooooooooooooooooooooooooo
+<div id="ddd">
+  <table>
+    <tr>
+      <td>名称</td>
+      <td>频道</td>
+      <td>报价</td>
+      <td>价格</td>
+      <td>操作</td>
+    </tr>
+    <tr>
+      <td>第一个报价</td>
+      <td>媒体</td>
+      <td>1</td>
+      <td>1000</td>
+      <td>添加</td>
+    </tr>
+     <tr>
+      <td>第一个第一个报价第一个报价第一个报价报价</td>
+      <td>媒体</td>
+      <td>1</td>
+      <td>1000</td>
+      <td>添加</td>
+    </tr>
+  </table>
+</div>
+</div>
+<input type="button" onclick="aa()" value="打印" id="dayin"/>
+<a href="javascript:void(0)"  id="a_href">下载</a>
+</body>
+</html>

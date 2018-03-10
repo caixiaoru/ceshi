@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1">
+    <title>频道报价</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/background.css">
+    <style>
+        @media screen and (orientation: portrait) {
+            html{
+                width : 100% ;
+                height : 100% ;
+            }
+            body{
+                width : 100% ;
+                height : 100% ;
+
+
+                margin:0!important;
+            }
+            #body{
+                position : absolute ;
+
+            }
+        }
+        @media screen and (orientation: landscape) {
+            html{
+                width : 100% ;
+                height : 100% ;
+
+            }
+            body{
+                width : 100% ;
+                height : 100% ;
+
+                margin:0!important;
+            }
+            #body{
+                position : absolute ;
+                top : 0 ;
+                left : 0 ;
+                width : 100% ;
+                height : 100% ;
+
+            }
+        }
+        /*#print p{*/
+        /*margin: auto ;*/
+        /*margin-top : 20px ;*/
+        /*text-align: center;*/
+        /*}*/
+
+
+
+
+
+    </style>
+</head>
+<body id="body">
+<div class="container-fluid">
+    <!--header-->
+    <div class="row clearfix">
+        <div class="col-md-12 column bg_login">
+            <p>我们用心选，请您放心选</p>
+        </div>
+    </div>
+    <!--logo-->
+    <div class="row clearfix bg_list_logo">
+        <div class="col-md-2 col-sm-1 col-xs-12 column "></div>
+        <div class="col-md-5 col-sm-6 col-xs-6 column bg_list_logo_img">
+            <img src="../../img/logo.png">&nbsp;——&nbsp;非洲最具影响力平台
+        </div>
+
+        <div class="col-md-3 col-sm-4 col-xs-6 column bg_list_logo_content">
+            <form>
+                <input type="text">
+                <span>查询报单价</span>
+            </form>
+        </div>
+        <div class="col-md-2 col-sm-1 col-xs-12 column "></div>
+    </div>
+    <!--导航栏-->
+    <div class="row clearfix bg_list_nav">
+
+
+        <nav class="navbar navbar-default "  role="navigation">
+            <div class="col-md-2 col-sm-2 col-xs-2 column "></div>
+            <div class="container-fluid  col-md-8 col-sm-8 col-xs-8 column">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="list.html">报价列表</a></li>
+                        <li><a href="add.html">添加报价</a></li>
+                        <li  class="active_nav"><a href="video.html">频道报价</a></li>
+                        <li><a href="recommended.html">报价推荐</a></li>
+                        <li><a href="login.html">退出系统</a></li>
+                        <li><a href="../one.html">返回前台</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2 column "></div>
+        </nav>
+
+
+
+    </div>
+
+    <!--报价列表-->
+    <div class="row ">
+        <div class="col-md-2 col-sm-2 col-xs-2 column "></div>
+        <div class="col-md-8 column bg_video ">
+            <!--选择-->
+            <div class="video_select">
+                <form>
+                    <div>选择频道:</div>
+                    <div class="video_select_content">
+                        <label for="video_select"></label>
+                        <select id="video_select" onchange="selectlist(this)">
+                            <option value="1">媒体</option>
+                            <option value="2">教育</option>
+                        </select>
+                    </div>
+                    <div class="video_select_btn_one">确定</div>
+                </form>
+            </div>
+            <!--列表-->
+            <div>
+            <div class="bg_list_content bg_add_c ba_add_show" id="select1">
+                <table class="video_table_01">
+                    <tr>
+                        <th>序号</th>
+                        <th>频道</th>
+                        <th>名称</th>
+                        <th>价格</th>
+                        <th colspan=4>操作</th>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>媒体</td>
+                        <td>首页广告</td>
+                        <td>4000元/月</td>
+                        <td>添加</td>
+                        <td><a href="../three.html">查看</a></td>
+                        <td><a href="edit.html">修改</a></td>
+
+                        <td class="bg_list_delete">删除</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>媒体</td>
+                        <td>首页广告</td>
+                        <td>4000元/月</td>
+                        <td><a href="add.html">添加</a></td>
+                        <td><a href="../three.html">查看</a></td>
+                        <td><a href="edit.html">修改</a></td>
+
+                        <td class="bg_list_delete">删除</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>媒体</td>
+                        <td>首页广告</td>
+                        <td>4000元/月</td>
+                        <td><a href="add.html">添加</a></td>
+                        <td><a href="../three.html">查看</a></td>
+                        <td><a href="edit.html">修改</a></td>
+
+                        <td class="bg_list_delete">删除</td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="bg_list_content bg_add_c" id="select2">
+                <table class="video_table_01">
+                    <tr>
+                        <th>序号</th>
+                        <th>频道</th>
+                        <th>名称</th>
+                        <th>价格</th>
+                        <th colspan=4>操作</th>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>教育</td>
+                        <td>首页广告</td>
+                        <td>4000元/月</td>
+                        <td>添加</td>
+                        <td><a href="../three.html">查看</a></td>
+                        <td><a href="edit.html">修改</a></td>
+                        <td class="bg_list_delete">删除</td>
+                    </tr>
+
+
+                </table>
+            </div>
+           </div>
+
+            <!--分页-->
+            <div class="bg_list_page video_page">
+                <div>
+                    <ul>
+                        <li>首页</li>
+                        <li>上一页</li>
+                        <li class="bg_list_page_none">…</li>
+                        <li class="bg_list_page_none">5</li>
+                        <li class="bg_list_page_active">6</li>
+                        <li class="bg_list_page_none">7</li>
+                        <li class="bg_list_page_none">8</li>
+
+                        <li class="bg_list_page_none">…</li>
+                        <li>下一页</li>
+                        <li>尾页</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <div>转到</div>
+                    <div contentEditable="true"></div>
+                    <div class="bg_list_jump">跳转</div>
+                </div>
+
+            </div>
+
+            <!--费用-->
+            <div class="video_pay_all">
+                <div class="row video_pay">
+                    <div class="col-md-5 col-sm-6 col-xs-6">
+                        <div>
+                            <div>已选报价:</div>
+                            <div contenteditable="true"></div>
+                            <div>个</div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5 col-sm-6 col-xs-6">
+                        <div>
+                            <div>费用共计:</div>
+                            <div contenteditable="true"></div>
+                            <div>元</div>
+                        </div>
+                        <div>
+                            <div>折扣:</div>
+                            <div contenteditable="true"></div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div>优惠费用:</div>
+                            <div contenteditable="true"></div>
+                            <div>元</div>
+                        </div>
+                        <div>
+                            <div>报价费用:</div>
+                            <div contenteditable="true"></div>
+                            <div>元</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--报价信息-->
+            <div class="bg_add video_info">
+                <form>
+                    <table >
+                        <tr>
+                            <td>报价名称:</td>
+                            <td>
+                                <label for="video_name"></label>
+                                <input type="text" id="video_name">
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>套餐说明:</td>
+                            <td colspan="3">
+                                <label for="video_sale"></label>
+                                <textarea id="video_sale" rows="3"></textarea>
+                            </td>
+                        </tr>
+
+
+
+                    </table>
+                </form>
+            </div>
+
+           <!--按钮-->
+            <div class="bg_add_btn video_btn">
+                <div class="bg_add_btn_ok"><a href="videopreview.html">套餐预览</a></div>
+                <div class="bg_add_btn_replay"><a href="videofinish.html">生成报价套餐</a></div>
+            </div>
+
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2 column "></div>
+    </div>
+
+
+</div>
+<!--删除-->
+<div class="row clearfix bg_list_delete_div">
+    <div class="col-md-12 column">
+        <div class="bg_list_delete_title">是否删除该条报价</div>
+        <div class="bg_list_delete_btn">
+            <div class="bg_list_delete_btn_one">确定</div>
+            <div class="bg_list_delete_btn_two">取消</div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery-3.1.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/commen.js"></script>
+<script>
+    function selectlist(obj){
+        console.log(obj);
+        $("#select" + obj).show().siblings().hide();
+
+//找到内容的标签 + 点击select获得的value值，让它显示，再让他的兄弟标签隐藏。
+    }
+
+    //  横屏
+    var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+    window.addEventListener(evt, function() {
+
+        var width = document.documentElement.clientWidth;
+        var height =  document.documentElement.clientHeight;
+        var height2=$('#body').prop('scrollHeight');
+        console.log(height2);
+        $print =  $('#body');
+        if( width > height ){
+
+            $print.width(width);
+            $print.height(height);
+            $print.css('top',  0 );
+            $print.css('left',  0 );
+            $print.css('transform' , 'none');
+            $print.css('transform-origin' , '50% 50%');
+            console.log(1);
+        }
+        else{
+            $print.width(height);
+            $print.height(height2);
+            $print.css('top',  (height-height2)/2 );
+            $print.css('left',  0-(height-height2)/2 );
+            $print.css('transform' , 'rotate(270deg)');
+            $print.css('transform-origin' , '50% 50%');
+            console.log(2);
+        }
+
+    }, false);
+
+</script>
+</body>
+</html>
