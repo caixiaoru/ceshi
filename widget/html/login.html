@@ -116,7 +116,7 @@
     var usernameValue=$api.byId("username").value;
     var passwordValue=$api.byId("password").value;
     var now = Date.now(); 
-      var appKey = SHA1("A6075527744015"+"UZ"+ "89BAEF2B-99AE-1AA6-31DD-601F72673D41"+"UZ"+now)+"."+now;    
+    var appKey = SHA1("A6075527744015"+"UZ"+ "89BAEF2B-99AE-1AA6-31DD-601F72673D41"+"UZ"+now)+"."+now;    
     api.ajax({
         url: 'https://d.apicloud.com/mcm/api/user/login',
         method: 'post',
@@ -139,7 +139,7 @@
         
     }, function(ret, err) {  
           
-        if (ret && ret.id) {          
+        if (ret && ret.id) {        
            
             
             // 保存用户信息
