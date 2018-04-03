@@ -7,56 +7,7 @@
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/font-awesome.min.css">
     <link rel="stylesheet" href="../../css/background.css">
-    <style>
-        @media screen and (orientation: portrait) {
-            html{
-                width : 100% ;
-                height : 100% ;
-            }
-            body{
-                width : 100% ;
-                height : 100% ;
-
-
-                margin:0!important;
-            }
-            #body{
-                position : absolute ;
-
-            }
-        }
-        @media screen and (orientation: landscape) {
-            html{
-                width : 100% ;
-                height : 100% ;
-
-            }
-            body{
-                width : 100% ;
-                height : 100% ;
-
-                margin:0!important;
-            }
-            #body{
-                position : absolute ;
-                top : 0 ;
-                left : 0 ;
-                width : 100% ;
-                height : 100% ;
-
-            }
-        }
-        /*#print p{*/
-        /*margin: auto ;*/
-        /*margin-top : 20px ;*/
-        /*text-align: center;*/
-        /*}*/
-
-
-
-
-
-    </style>
+    
 </head>
 <body id="body">
 <div class="container-fluid">
@@ -67,13 +18,13 @@
         </div>
     </div>
     <!--logo-->
-    <div class="row clearfix bg_list_logo">
+     <div class="row clearfix bg_list_logo">
         <div class="col-md-2 col-sm-1 col-xs-12 column "></div>
-        <div class="col-md-5 col-sm-6 col-xs-6 column bg_list_logo_img">
-            <img src="../../img/logo.png">&nbsp;——&nbsp;非洲最具影响力平台
+        <div class="col-md-5 col-sm-5 col-xs-12 column bg_list_logo_img">
+            <img src="../../image/logo.png">&nbsp;——&nbsp;非洲最具影响力平台
         </div>
 
-        <div class="col-md-3 col-sm-4 col-xs-6 column bg_list_logo_content">
+        <div class="col-md-3 col-sm-5 col-xs-12 column bg_list_logo_content">
             <form>
                 <input type="text">
                 <span>查询报单价</span>
@@ -131,7 +82,7 @@
                             <option value="2">教育</option>
                         </select>
                     </div>
-                    <div class="video_select_btn_one">确定</div>
+                    
                 </form>
             </div>
             <!--列表-->
@@ -208,66 +159,55 @@
            </div>
 
             <!--分页-->
-            <div class="bg_list_page video_page">
-                <div>
-                    <ul>
-                        <li>首页</li>
-                        <li>上一页</li>
-                        <li class="bg_list_page_none">…</li>
-                        <li class="bg_list_page_none">5</li>
-                        <li class="bg_list_page_active">6</li>
-                        <li class="bg_list_page_none">7</li>
-                        <li class="bg_list_page_none">8</li>
+            <!-- <div class="bg_list_page">
+                <ul>
+                <li>上一页</li>
+            <li>#n</li>
+            <li>#n</li>
+            <li>#c</li>
+            <li>#n</li>
+            <li>#n</li>
+           
+            
+            <li>下一页</li></ul>
 
-                        <li class="bg_list_page_none">…</li>
-                        <li>下一页</li>
-                        <li>尾页</li>
+        </div> -->
 
-                    </ul>
-                </div>
-                <div>
-                    <div>转到</div>
-                    <div contentEditable="true"></div>
-                    <div class="bg_list_jump">跳转</div>
-                </div>
-
-            </div>
-
-            <!--费用-->
-            <div class="video_pay_all">
-                <div class="row video_pay">
-                    <div class="col-md-5 col-sm-6 col-xs-6">
-                        <div>
-                            <div>已选报价:</div>
-                            <div contenteditable="true"></div>
-                            <div>个</div>
+           <!--费用-->
+                    <div class="video_pay_all videopreview_pay">
+                        <div class="row video_pay">
+                            <div class="col-md-5">
+                                <div>
+                                    <div>已选报价:</div>
+                                    <div contenteditable="true"></div>
+                                    <div>个</div>
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                            <div class="col-md-5">
+                                <div>
+                                    <div>费用共计:</div>
+                                    <div contenteditable="true"></div>
+                                    <div>元</div>
+                                </div>
+                                <div>
+                                    <div>折扣:</div>
+                                    <div contenteditable="true"></div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div>优惠费用:</div>
+                                    <div contenteditable="true"></div>
+                                    <div>元</div>
+                                </div>
+                                <div>
+                                    <div>报价费用:</div>
+                                    <div contenteditable="true"></div>
+                                    <div>元</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-2"></div>
-                    <div class="col-md-5 col-sm-6 col-xs-6">
-                        <div>
-                            <div>费用共计:</div>
-                            <div contenteditable="true"></div>
-                            <div>元</div>
-                        </div>
-                        <div>
-                            <div>折扣:</div>
-                            <div contenteditable="true"></div>
-                            <div></div>
-                        </div>
-                        <div>
-                            <div>优惠费用:</div>
-                            <div contenteditable="true"></div>
-                            <div>元</div>
-                        </div>
-                        <div>
-                            <div>报价费用:</div>
-                            <div contenteditable="true"></div>
-                            <div>元</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!--报价信息-->
             <div class="bg_add video_info">
                 <form>
@@ -298,7 +238,7 @@
            <!--按钮-->
             <div class="bg_add_btn video_btn">
                 <div class="bg_add_btn_ok"><a href="videopreview.html">套餐预览</a></div>
-                <div class="bg_add_btn_replay"><a href="videofinish.html">生成报价套餐</a></div>
+                <div class="bg_add_btn_replay"><a href="videofinish.html" style="color:white">生成报价套餐</a></div>
             </div>
 
         </div>
@@ -318,47 +258,101 @@
     </div>
 </div>
 
-<script src="../../js/jquery-3.1.1.min.js"></script>
-<script src="../../js/bootstrap.min.js"></script>
-<script src="../../js/commen.js"></script>
+<script src="../../script/jquery-3.1.1.min.js"></script>
+<script src="../../script/bootstrap.min.js"></script>
+<script src="../../script/jquery.paging.min.js"></script>
+<script src="../../script/jquery.easy-paging.js"></script>
+<script src="../../script/commen.js"></script>
 <script>
-    function selectlist(obj){
-        console.log(obj);
-        $("#select" + obj).show().siblings().hide();
+   // 分页
+    $(function(){  
+        var pageData=$(".bg_list_num table tbody tr");
+        var head=  
+    '<thead><tr>'+  
+    '<th>序号</th>'+  
+    '<th>报价名称</th>'+  
+    '<th>原价</th>'+  
+    '<th>报价</th>'+  
+    '<th>折扣</th>'+  
+    '<th>添加时间</th>'+  
+    '<th colspan=4>操作</th>'+  
+    '</tr></thead><tbody>'; 
+        
+    var end='</tbody>';   
 
-//找到内容的标签 + 点击select获得的value值，让它显示，再让他的兄弟标签隐藏。
-    }
+    var Count = pageData.length;//记录条数
+    var PageSize=3;//设置每页示数目  
+    var PageCount=Math.ceil(Count/PageSize);//计算总页数  
+    var currentPage =1;//当前页，默认为1。  
+    var tbody=$(".bg_list_num table tbody tr");//获取数据
 
-    //  横屏
-    var evt = "onorientationchange" in window ? "orientationchange" : "resize";
-    window.addEventListener(evt, function() {
 
-        var width = document.documentElement.clientWidth;
-        var height =  document.documentElement.clientHeight;
-        var height2=$('#body').prop('scrollHeight');
-        console.log(height2);
-        $print =  $('#body');
-        if( width > height ){
+  //显示默认页（第一页）  
+    $('.bg_list_num table').empty().append(head); 
+    for(i=(currentPage-1)*PageSize;i<PageSize*currentPage;i++){    
+        $('.bg_list_num table').append(pageData[i]);  
+    }  
+    $('.bg_list_num table').append(end);  
+      
 
-            $print.width(width);
-            $print.height(height);
-            $print.css('top',  0 );
-            $print.css('left',  0 );
-            $print.css('transform' , 'none');
-            $print.css('transform-origin' , '50% 50%');
-            console.log(1);
-        }
-        else{
-            $print.width(height);
-            $print.height(height2);
-            $print.css('top',  (height-height2)/2 );
-            $print.css('left',  0-(height-height2)/2 );
-            $print.css('transform' , 'rotate(270deg)');
-            $print.css('transform-origin' , '50% 50%');
-            console.log(2);
-        }
+$(".bg_list_page").easyPaging(Count*3, {
+                onSelect: function(page) {
+                    $(".bg_list_num table").html('');
+                     $(".bg_list_num table").append(head);
+                     for(i=(page-1)*PageSize;i<PageSize*page;i++){
 
-    }, false);
+                      $('.bg_list_num table').append(tbody[i]);
+                     }
+                      $('.bg_list_num table').append(end);  
+                }
+            });
+
+
+
+//        //  横屏
+//        var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+//
+//        window.addEventListener(evt, function() {
+//            var width = document.documentElement.clientWidth;
+//            var height =  document.documentElement.clientHeight;
+//            var height2=$('#body').prop('scrollHeight');
+//            console.log(height2);
+//            $print =  $('#body');+666666666666666
+//
+//            if( width > height ){
+//                $print.width(width);
+//                $print.height(height);
+//                $print.css('top',  0 );
+//                $print.css('left',  0 );
+//                $print.css('transform' , 'none');
+//                $print.css('transform-origin' , '50% 50%');
+//                console.log(1);
+//            }
+//            else{
+//                $print.width(height);
+//                $print.height(height2);
+//                $print.css('top',  (height-height2)/2 );
+//                $print.css('left',  0-(height-height2)/2 );
+//                $print.css('transform' , 'rotate(270deg)');
+//                $print.css('transform-origin' , '50% 50%');
+//                console.log(2);
+//            }
+//        }, false);
+      
+    //显示选择页的内容  
+    // $('.bg_list_page a').click(function(){  
+    //  var selectPage=$(this).attr('selectPage');  
+    //  $('.bg_list_num table').html('');  
+    //     $('.bg_list_num table').append(head);  
+    //     for(i=(selectPage-1)*PageSize;i<PageSize*selectPage;i++){  
+    //         $('.bg_list_num table').append(tbody[i]);  
+    //     }  
+    //     $('.bg_list_num table').append(end);  
+    // });  
+
+});
+
+
 
 </script>
 </body>

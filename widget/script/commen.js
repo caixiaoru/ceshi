@@ -6,7 +6,7 @@ $('body').on('click','.combination_tab>div',function () {
     //    组合报价tab切换  
          
         $(this).addClass("combination_tab_active").siblings().removeClass("combination_tab_active");
-        //$('.combination_tab_content>div').eq($(this).index()).addClass('combination_tab_content_show').siblings().removeClass('combination_tab_content_show');
+        $('.combination_tab_content>div').eq($(this).index()).addClass('combination_tab_content_show').siblings().removeClass('combination_tab_content_show');
     
 })
 

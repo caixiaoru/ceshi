@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/swiper.min.css">
     
     <link rel="stylesheet" href="../css/commen.css">
-    <link rel="stylesheet" href="../css/api.css">
+    
     <style>
 
     </style>
@@ -139,13 +139,6 @@
                 </div>
             </div>
             <div class="row clearfix index_hot_content" id="order_list">
-               <!--  <div class="index_hot_content_one">
-                    <div><img src="../image/hot_01.jpg"></div>
-                    <div>
-                        <p>企业网站建设(网站设计/开发/网站制作/网站定制)</p>
-                        <p class="index_hot_price">价格：<span>2999/次</span></p>
-                    </div>
-                </div>
                 <div class="index_hot_content_one">
                     <div><img src="../image/hot_01.jpg"></div>
                     <div>
@@ -166,7 +159,14 @@
                         <p>企业网站建设(网站设计/开发/网站制作/网站定制)</p>
                         <p class="index_hot_price">价格：<span>2999/次</span></p>
                     </div>
-                </div> -->
+                </div>
+                <div class="index_hot_content_one">
+                    <div><img src="../image/hot_01.jpg"></div>
+                    <div>
+                        <p>企业网站建设(网站设计/开发/网站制作/网站定制)</p>
+                        <p class="index_hot_price">价格：<span>2999/次</span></p>
+                    </div>
+                </div>
             </div>
             
 
@@ -271,8 +271,7 @@
 <script src="../script/bootstrap.min.js"></script>
 <script src="../script/swiper.min.js"></script>
 <script src="../script/commen.js"></script>
-<script src="../script/api.js"></script>
-<script src="../script/sha1.js"></script>
+
 <script>
     var swiper = new Swiper('.swiper-container', {
         autoplay: true,
@@ -286,125 +285,7 @@
     });
 
 
- apiready = function() { 
-    // 获取登录信息
-    var userId=$api.getStorage('userId');     
-    if(userId != undefined){
-        // 已经登录        
-        $api.byId("logout").style.display="inline-block"; 
-        $api.byId("logbg").style.display="inline-block";       
-        $api.byId("login").setAttribute("href","javascript:void(0)");
-        loginInfo();
-    }
-    else{
-        $api.byId("logout").style.display="none";
-        $api.byId("logbg").style.display="none";
-        $api.byId("login").setAttribute("href","login.html");        
-    }   
-    // 热门报价单
-    fnGetorderList();
-};
-
-
-// 获取用户名
-function loginInfo(){    
-    var userId=$api.getStorage('userId'); 
-    var now = Date.now(); 
-    var appKey = SHA1("A6075527744015"+"UZ"+ "89BAEF2B-99AE-1AA6-31DD-601F72673D41"+"UZ"+now)+"."+now;    
-    api.ajax({
-        url: 'https://d.apicloud.com/mcm/api/user/' + userId,
-        method: 'get',
-        headers: {
-            "X-APICloud-AppId": "A6075527744015",
-            "X-APICloud-AppKey": appKey
-        }
-    }, function(ret, err) {
-        if (ret) {           
-            //alert(JSON.stringify(ret));
-            $api.byId("login").innerText=ret.username;     
-        } else {
-            alert(JSON.stringify(err));
-        }
-    });
-}
-
-// 退出
-function fnloginout(){
-    var uId=$api.getStorage('uId'); 
-    //alert(uId);
-    var now = Date.now(); 
-    var appKey = SHA1("A6075527744015"+"UZ"+ "89BAEF2B-99AE-1AA6-31DD-601F72673D41"+"UZ"+now)+"."+now;    
-    api.ajax({
-        url: 'https://d.apicloud.com/mcm/api/user/logout',
-        method: 'post',
-        headers: {
-            "X-APICloud-AppId": "A6075527744015",
-            "X-APICloud-AppKey": appKey,
-            "authorization":uId
-        }
-    }, function(ret, err) {
-        if (ret) {           
-            //alert(JSON.stringify(ret));
-            $api.byId("login").innerText='登录';
-            $api.byId("login").setAttribute("href","login.html");
-            $api.byId("logout").style.display="none";  
-             $api.byId("logbg").style.display="none";
-                 
-        } else {
-            alert(JSON.stringify(err));
-        }
-    });
-}
-
-// 获取热门报价单数据
-function fnGetorderList() {
-    var now = Date.now(); 
-    var appKey = SHA1("A6075527744015"+"UZ"+ "89BAEF2B-99AE-1AA6-31DD-601F72673D41"+"UZ"+now)+"."+now;    
-    var params = {
-        fields: {
-            createdAt: false,
-            updatedAt: false
-        },
-        where: {},
-        skip: 0,
-        limit: 4
-    }
-    params = $api.jsonToStr(params);
-    api.ajax({
-        url: 'http://d.apicloud.com/mcm/api/order?filter=' + params,
-        method: 'get',
-        headers: {
-            "X-APICloud-AppId": "A6075527744015",
-            "X-APICloud-AppKey": appKey
-        }
-    }, function(ret, err) {
-        if (ret) { 
-            // 显示数据
-             fnUpdateorderList(ret);
-        } else {
-            alert(JSON.stringify(err));
-        }
-    });
-}
-// 显示热门报价单数据
-function fnUpdateorderList(data_) {   
-    var list = $api.byId('order_list');
-    var html = '';    
-     for (var i = 0; i < data_.length; i++) {        
-         if (data_[i].name) {
-             html += '<div class="index_hot_content_one">';
-             html += '<div><img src='+"../image/hot_01.jpg"+'></div>';
-             html += '<div>';
-             html += '<p>'+data_[i].name+'</p>';
-             html += '<p class="index_hot_price">价格：<span>'+data_[i].price+'/次</span></p>';
-             html += '</div>';
-             html += '</div> ';
-         }
-     }
-    $api.html(list, html);
-}
-
-
+ 
   </script>
 </body>
 

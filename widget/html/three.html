@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1">
-    <title>首页</title>
+    <title>组合报价套餐</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/commen.css">
+
 </head>
 <body>
 <div class="container-fluid">
-    <!--头部-->
+   <!--头部-->
     <div class="row clearfix index_header">
         <div class="col-md-2 col-sm-1 column">
         </div>
@@ -18,9 +19,9 @@
             <div class="row clearfix index_header_one">
                
                 <div class=" index_header_sign">
-                    <a href="">登录</a>
-                    <a href="">退出</a>
-                    <a href="">[登录后台]</a>
+                    <a href="login.html" id="login">登录</a>
+                    <a href="javascript:void(0)" onclick="fnloginout()" id="logout">退出</a>
+                    <a href="background/list.html" id="logbg">[登录后台]</a>
 
                 </div>
                  <div class=" index_header_link">
@@ -61,8 +62,8 @@
         </div>
         <div class="col-md-8 col-sm-10 col-xs-10 column index_nav_content">
             <div>
-                <a href="one.html" >首页</a>
-                <a href="two.html" class="index_nav_active">组合报价</a>
+                <a href="one.html">首页</a>
+                <a href="two.html"  class="index_nav_active">组合报价</a>
                 <a href="four.html">热销报价</a>
             </div>
         </div>
@@ -190,7 +191,7 @@
                         <div><p> 报价费用：&nbsp;&nbsp;&nbsp;</p><p>10,000</p>元</div>
                     </div>
                     <div class="combination_have_btn">
-                        <div><p>打印报价套餐</p></div>
+                        <div class="combination_have_btn_print"><p>打印报价套餐</p></div>
                         <div><p>返回修改</p></div>
                     </div>
 
@@ -205,7 +206,7 @@
 
 
     <!--购买流程-->
-    <div class="row clearfix index_buy hot_buy">
+    <div class="row clearfix index_buy">
         <div class="col-md-2 col-sm-1 column">
         </div>
         <div class="col-md-8 col-sm-10 column">
@@ -215,45 +216,77 @@
                 </div>
             </div>
             <div class="row index_buy_content">
-                <div class="col-md-1 col-sm-1 col-xs-12 column">
+                <div class="col-md-1 col-sm-1 col-xs-1 column">
 
                 </div>
-                <div class="col-md-2 col-sm-2 col-xs-12 column">
+                <div class="col-md-2 col-sm-2 col-xs-2 column">
                     <div>
-                        <img src="../image/buy_01.png">
-                    </div>
-                    <p>查看报价</p>
+                    <img src="../image/buy_01.png">
+                     </div>
+                    <p>
+                        <b>查</b>
+                        <b>看</b>
+                        <b>报</b>
+                        <b>价</b>
+                    </p>
                     <span class="fa fa-angle-right"></span>
                 </div>
-                <div class="col-md-2 col-sm-2 col-xs-12 column">
+                <div class="col-md-2 col-sm-2 col-xs-2 column">
                     <div>
                         <img src="../image/buy_02.png">
                     </div>
-                    <p>组合立体创意</p>
+                    <p>
+                        <b>组</b>
+                        <b>合</b>
+                        <b>立</b>
+                        <b>体</b>
+                        <b>创</b>
+                        <b>意</b>
+                    </p>
                     <span class="fa fa-angle-right"></span>
                 </div>
-                <div class="col-md-2 col-sm-2 col-xs-12 column">
+                <div class="col-md-2 col-sm-2 col-xs-2 column">
                     <div>
                         <img src="../image/buy_03.png">
                     </div>
-                    <p>试用体验</p>
+                    <p>
+                        <b>试</b>
+                        <b>用</b>
+                        <b>体</b>
+                        <b>验</b>
+
+                    </p>
                     <span class="fa fa-angle-right"></span>
                 </div>
-                <div class="col-md-2 col-sm-2 col-xs-12 column">
+                <div class="col-md-2 col-sm-2 col-xs-2 column">
                     <div>
                         <img src="../image/buy_04.png">
                     </div>
-                    <p>签订协议付款</p>
+                    <p>
+                        <b>签</b>
+                        <b>订</b>
+                        <b>协</b>
+                        <b>议</b>
+                        <b>付</b>
+                        <b>款</b>
+                    </p>
                     <span class="fa fa-angle-right"></span>
                 </div>
-                <div class="col-md-2 col-sm-2 col-xs-12 column">
+                <div class="col-md-2 col-sm-2 col-xs-2 column">
                     <div>
                         <img src="../image/buy_05.png">
                     </div>
-                    <p>正式开始服务</p>
+                    <p>
+                        <b>正</b>
+                        <b>式</b>
+                        <b>开</b>
+                        <b>始</b>
+                        <b>服</b>
+                        <b>务</b>
+                    </p>
 
                 </div>
-                <div class="col-md-1 col-sm-1 col-xs-12 column">
+                <div class="col-md-1 col-sm-1 col-xs-1 column">
 
                 </div>
             </div>
@@ -264,9 +297,12 @@
     </div>
 
 </div>
+<script src="../script/jquery-1.11.0.min.js"></script>
 
-<script src="../script/jquery-3.1.1.min.js"></script>
+
 <script src="../script/bootstrap.min.js"></script>
+<script src="../script/jquery.jqprint-0.3.js"></script>
 <script src="../script/commen.js"></script>
+
 </body>
 </html>

@@ -29,7 +29,7 @@ p{margin-bottom: 0}
 .bg_nav_content a{color:white;padding:8px 9% 8px 0;border-radius: 3px 3px 0 0;}
 .navbar-default{background-color:#398dc5;color:#398dc5 }
 .navbar-default .navbar-nav>li>a,.navbar-default .navbar-nav>li>a:hover{color:white}
-.bg_list_content table{width:100%}
+
 .bg_list_content table thead tr:nth-of-type(1){background-color: #f2f2f2}
 .bg_list_content table thead tr:nth-of-type(1) th{padding:10px;text-align: center}
 .bg_list_content table td{text-align: center;padding:15px 0;border:1px solid #f5f5f5}
@@ -60,15 +60,15 @@ p{margin-bottom: 0}
 
 /*tiajia */
 .bg_add{border:1px solid #f4f4f4;padding:20px 10px;}
-.bg_add table tr td{padding:10px;}
+.bg_add table tr td{padding:5px;}
 .bg_add table tr td:nth-of-type(1){text-align: right}
-.bg_add table select,.bg_add table input{width:200px;border-radius: 25px;border:1px solid #398dc5;padding:5px;height:32px;}
-.bg_add table textarea{border:1px solid #398dc5;border-radius: 10px;width:340px;}
-.add_price{width:200px;border-radius: 25px;border:1px solid #398dc5;height:32px;line-height: 32px;text-align: center}
+.bg_add table select,.bg_add table input{border-radius: 25px;border:1px solid #398dc5;padding:5px;height:32px;}
+.bg_add table textarea{border:1px solid #398dc5;border-radius: 10px;}
+.add_price{width:90%;border-radius: 25px;border:1px solid #398dc5;height:32px;line-height: 32px;text-align: center;margin-left:4px;}
 #add_price{width:80px;border: none;height:28px;float:right;border-radius: 0 25px 25px 0;margin-right:10px}
 #recom_img{padding-top:0!important;width:80px;border: none;height:28px;margin-left:18px;border-radius: 0 25px 25px 0;float:left}
-.bg_add_comp p{background-color: #398dc5;color:white;border-radius: 25px;padding:5px 18px!important;cursor: pointer}
-.bg_add_video p{background-color: #398dc5;color:white;border-radius: 25px;padding:5px 18px!important;cursor: pointer}
+.bg_add_comp{background-color: #398dc5;color:white;border-radius: 25px;padding:5px 18px!important;cursor: pointer}
+.bg_add_video{background-color: #398dc5;color:white;border-radius: 25px;padding:5px 18px!important;cursor: pointer}
 .bg_add_btn div{cursor: pointer;display: inline-block;background-color:#398dc5;border-radius: 25px;padding:5px 24px;color:white ;margin-top:4%}
 .bg_add_btn_ok{margin-left:6%;margin-right:3%}
 .bg_add_btn_ok a{color:white}
@@ -76,7 +76,9 @@ p{margin-bottom: 0}
 .bg_add_d{margin-top:5%}
 .bg_add_c{display:none}
 .ba_add_show{display:block}
-
+.list_add input,.list_add select,.list_add textarea{width:90%;}
+.video_table_01{width:100%;}
+.video_table_01 th{background-color:#f2f2f2;}
 /*编辑遮罩层*/
 .bg_list_editcomp_div{display: none;z-index:99;position: fixed;top:30%;left:25%;background-color: rgba(110, 138, 144, 0.60);width:50%;border-radius: 10px;}
 .bg_list_editcomp_title{text-align: center;letter-spacing:4px;margin-top:10%;color:white;font-size:20px;font-weight:600}
@@ -144,7 +146,7 @@ margin-top:20px;}
 }
 @media (max-width: 600px){
     .bg_list_logo_img{width:100%}
-    .bg_list_logo_content{width:60%}
+   
     .bg_list_page_none{display: none!important;}
     .bg_list_delete_btn_two,.bg_list_editcomp_btn_two{margin-top:15px!important;}
 }
@@ -153,4 +155,8 @@ margin-top:20px;}
 /*修改33 34行*/
 
 .bg_list_page div ul li{color:black;cursor: pointer;list-style: none;display: inline-block;margin-right:10px;}
-
+.list_add tr td:nth-of-type(1){width:25%;}
+.list_add tr td:nth-of-type(2){width:60%;}
+.bg_list_page li{text-align: center;width:30px;height:30px;display:inline-block;list-style: none;border:1px solid #398dc5;border-radius: 50%;margin-right:10px;padding:5px;}
+.current{background-color:#398dc5;color:white; }
+.bg_list_page li:nth-of-type(1),.bg_list_page li:nth-of-type(7){width:60px;border-radius: 25px;}

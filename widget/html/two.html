@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1">
-    <title>首页</title>
+    <title>组合报价</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/commen.css">
-    <link rel="stylesheet" href="../css/api.css">
+    
 
 </head>
 <body>
@@ -86,17 +86,17 @@
 
             <div class="row combination_content">
                 <div class="col-md-12 column combination_tab" id="combination_tab">
-                    <!-- <div class="combination_tab_active" id="value_1">媒体</div>
+                    <div class="combination_tab_active" id="value_1">媒体</div>
                     <div>严选</div>
                     <div>商旅</div>
                     <div>咨询</div>
                     <div>会展</div>
-                    <div>教育</div> -->
+                    <div>教育</div>
                 </div>
                 <div class="col-md-12 column combination_tab_content">
                     <div class="combination_tab_content_show" >
                         <table class="two_table_one combination_a" id="combination_content_show">
-                           <!--  <tr>
+                            <tr>
                                 <th>id</th>
                                 <th>所属频道</th>
                                 <th>名称</th>
@@ -131,14 +131,14 @@
                                 <td>一个图片类广告投放行业站点首页，链接至指定位置</td>
                                 <td class="offer_money">4000元/月</td>
                                 <td class="two_add">添加</td>
-                            </tr> -->
+                            </tr>
                         </table>
                     </div>
-                    <!-- <div class="">
+                    <div class="">
                         <table class="two_table_one combination_a">
 
                             <tr>
-                                <td>id</td>
+                                <th>id</th>
                                 <th>所属频道</th>
                                 <th>名称</th>
                                 <th>卖点</th>
@@ -181,7 +181,7 @@
                         <table class="two_table_one combination_a">
 
                             <tr>
-                                <td>id</td>
+                                <th>id</th>
                                 <th>所属频道</th>
                                 <th>名称</th>
                                 <th>卖点</th>
@@ -206,7 +206,7 @@
                         <table class="two_table_one combination_a">
 
                             <tr>
-                                <td>id</td>
+                                <th>id</th>
                                 <th>所属频道</th>
                                 <th>名称</th>
                                 <th>卖点</th>
@@ -215,8 +215,8 @@
                                 <th>操作</th>
                             </tr>
                             <tr>
-                                <td>8</td>
-                                <td>咨询</td>
+                                <td>7</td>
+                                <td>商旅</td>
                                 <td>首页广告</td>
                                 <td>垂直投放受众精准，网站核心版位的高附加值体现</td>
                                 <td>一个图片类广告投放行业站点首页，链接至指定位置</td>
@@ -227,11 +227,11 @@
 
                         </table>
                     </div>
-                    <div class="">
+                     <div class="">
                         <table class="two_table_one combination_a">
 
                             <tr>
-                                <td>id</td>
+                                <th>id</th>
                                 <th>所属频道</th>
                                 <th>名称</th>
                                 <th>卖点</th>
@@ -240,8 +240,8 @@
                                 <th>操作</th>
                             </tr>
                             <tr>
-                                <td>11</td>
-                                <td>会展</td>
+                                <td>7</td>
+                                <td>商旅</td>
                                 <td>首页广告</td>
                                 <td>垂直投放受众精准，网站核心版位的高附加值体现</td>
                                 <td>一个图片类广告投放行业站点首页，链接至指定位置</td>
@@ -252,11 +252,11 @@
 
                         </table>
                     </div>
-                    <div class="">
+                     <div class="">
                         <table class="two_table_one combination_a">
 
                             <tr>
-                                <td>id</td>
+                                <th>id</th>
                                 <th>所属频道</th>
                                 <th>名称</th>
                                 <th>卖点</th>
@@ -265,8 +265,8 @@
                                 <th>操作</th>
                             </tr>
                             <tr>
-                                <td>12</td>
-                                <td>教育</td>
+                                <td>7</td>
+                                <td>商旅</td>
                                 <td>首页广告</td>
                                 <td>垂直投放受众精准，网站核心版位的高附加值体现</td>
                                 <td>一个图片类广告投放行业站点首页，链接至指定位置</td>
@@ -277,7 +277,7 @@
 
                         </table>
                     </div>
- -->
+
                 </div>
             </div>
         </div>
@@ -332,7 +332,7 @@
                         <div>
                             <form>
                                 <textarea rows="3" ></textarea>
-                                <input type="text" value="0" id="good_2" >
+                                
                             </form>
                            </div>
                     </div>
@@ -353,186 +353,10 @@
   </div>
 <script src="../script/jquery-3.1.1.min.js"></script>
 <script src="../script/bootstrap.min.js"></script>
-<script src="../script/api.js"></script>
-<script src="../script/sha1.js"></script>
+
 <script src="../script/commen.js"></script>
 
 <script>
-apiready = function() {
-    // 获取登录信息
-    var userId=$api.getStorage('userId');     
-    if(userId != undefined){
-        // 已经登录        
-        $api.byId("logout").style.display="inline-block"; 
-        $api.byId("logbg").style.display="inline-block";       
-        $api.byId("login").setAttribute("href","javascript:void(0)");
-        loginInfo();
-    }
-    else{
-        $api.byId("logout").style.display="none";
-        $api.byId("logbg").style.display="none";
-        $api.byId("login").setAttribute("href","login.html");        
-    }   
-    fnGetquotationList();
-};
-// 获取用户名
-function loginInfo(){    
-    var userId=$api.getStorage('userId'); 
-    var now = Date.now(); 
-    var appKey = SHA1("A6075527744015"+"UZ"+ "89BAEF2B-99AE-1AA6-31DD-601F72673D41"+"UZ"+now)+"."+now;    
-    api.ajax({
-        url: 'https://d.apicloud.com/mcm/api/user/' + userId,
-        method: 'get',
-        headers: {
-            "X-APICloud-AppId": "A6075527744015",
-            "X-APICloud-AppKey": appKey
-        }
-    }, function(ret, err) {
-        if (ret) {           
-            //alert(JSON.stringify(ret));
-            $api.byId("login").innerText=ret.username;     
-        } else {
-            alert(JSON.stringify(err));
-        }
-    });
-}
-
-// 退出
-function fnloginout(){
-    var uId=$api.getStorage('uId'); 
-    //alert(uId);
-    var now = Date.now(); 
-    var appKey = SHA1("A6075527744015"+"UZ"+ "89BAEF2B-99AE-1AA6-31DD-601F72673D41"+"UZ"+now)+"."+now;    
-    api.ajax({
-        url: 'https://d.apicloud.com/mcm/api/user/logout',
-        method: 'post',
-        headers: {
-            "X-APICloud-AppId": "A6075527744015",
-            "X-APICloud-AppKey": appKey,
-            "authorization":uId
-        }
-    }, function(ret, err) {
-        if (ret) {           
-            //alert(JSON.stringify(ret));
-            $api.byId("login").innerText='登录';
-            $api.byId("login").setAttribute("href","login.html");
-            $api.byId("logout").style.display="none";  
-             $api.byId("logbg").style.display="none";
-                 
-        } else {
-            alert(JSON.stringify(err));
-        }
-    });
-}
-
-
-// 获取频道分类列表
-function fnGetquotationList() {
-    var now = Date.now(); 
-      var appKey = SHA1("A6075527744015"+"UZ"+ "89BAEF2B-99AE-1AA6-31DD-601F72673D41"+"UZ"+now)+"."+now; 
-
-// 获取分类
-    var params_one = {
-        fields: {
-            createdAt: false,
-            updatedAt: false
-        },
-        where: {},
-        skip: 0,
-        // limit: 
-    }
-    params_one = $api.jsonToStr(params_one);
-    api.ajax({
-        url: 'https://d.apicloud.com/mcm/api/channel?filter=' + params_one,
-        method: 'get',
-        headers: {
-            "X-APICloud-AppId": "A6075527744015",
-            "X-APICloud-AppKey": appKey
-        }
-    }, function(ret, err) {
-        if (ret) {
-            // 显示分类
-            //alert(ret);
-             fnchannelList(ret);
-        } else {
-            alert(JSON.stringify(err));
-        }
-    });
-
-    //获取商品列表
-     var params_two = {
-        fields: {
-            createdAt: false,
-            updatedAt: false
-        },
-        where: {
-            channelname:'媒体' 
-        },
-        skip: 0,
-        // limit: 
-    }
-    params_two = $api.jsonToStr(params_two);
-    api.ajax({
-        url: 'https://d.apicloud.com/mcm/api/quotation?filter=' + params_two,
-        method: 'get',
-        headers: {
-            "X-APICloud-AppId": "A6075527744015",
-            "X-APICloud-AppKey": appKey
-        }
-    }, function(ret, err) {
-        if (ret) {
-            alert(JSON.stringify(ret));
-
-             fnquotationList(ret);
-        } else {
-            alert(JSON.stringify(err));
-        }
-    });
-
-    
-}
-// 显示分类
-function fnchannelList(data_) {    
-    var list = $api.byId('combination_tab');
-    var html = '';    
-     for (var i = 0; i < data_.length; i++) {    
-         
-         if (data_[i].channelname) {  
-            if(i == 0){
-               
-               html += '<div class="combination_tab_active">'+data_[i].channelname+'</div>';
-            
-            }   
-            if(i != 0){
-                
-                html += '<div>'+data_[i].channelname+'</div>';
-            }     
-             
-         }
-     }
-
-    $api.html(list, html);
-}
-
-// 显示分类频道
-function fnquotationList(data){
-    alert(data.length);
-    var combination_content_show=$api.byId('combination_content_show');
-    var head='<tr><th>id</th><th>所属频道</th><th>名称</th><th>卖点</th><th>服务权益</th><th>价格</th><th>操作</th></tr>';
-    combination_content_show += head;
-    var html='';
-      for (var i = 0; i < data.length; i++) {   
-         
-         if (data[i].name) {  
-              html += '<tr><td>'+data[i].id+'</td><td>'+data[i].channelname+'</td><td>'+data[i].quoname+'</td><td>'+data[i].selling_point+'</td><td>'+data[i].content+'</td><td class="offer_money">'+data[i].price+data[i].monetary_unit+'</td><td class="two_add">添加</td></tr>'
-             
-         }
-     }
-     combination_content_show += html;
-     
-    $api.html(combination_content_show, combination_content_show);
-
-}
 
 </script>
 </body>
